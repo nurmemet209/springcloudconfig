@@ -10,26 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by nurmemet on 9/12/2017.
  */
 @RestController
-@RefreshScope
 public class MyController {
 
     @Value("${message}")
-    String authorName;
+    String msg;
 
     @RequestMapping("hello")
     public String hello(){
-        return "hello "+authorName;
+        return "hello "+ msg;
     }
 
 
 
 
-    @Value("numrmrm")
-    String port;
 
-    @RequestMapping("tt")
-    public String home(@RequestParam String name) {
-
-        return "hi "+name+",i am from port:" +port;
-    }
 }
